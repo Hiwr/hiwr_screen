@@ -33,9 +33,9 @@ import numpy as np
 
 import roslib
 import rospy
-from hyve_msg.msg import EyesLook
-from hyve_msg.msg import Animation
-from hyve_msg.msg import TouchEvent
+from hiwr_msg.msg import EyesLook
+from hiwr_msg.msg import Animation
+from hiwr_msg.msg import TouchEvent
 import std_msgs
 
 from efl.evas import SmartObject, EVAS_HINT_EXPAND, EVAS_HINT_FILL

@@ -20,7 +20,7 @@
 #############################################################################
 
 import rospy
-from hyve_msg.msg import EyesLook
+from hiwr_msg.msg import EyesLook
 from random import *;
 
 def talker():
