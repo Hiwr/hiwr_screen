@@ -9,9 +9,9 @@ import os
 from pygame.locals import *
 import math
 import rospy
-from hyve_msg.msg import EyesLook
-from hyve_msg.msg import Animation
-from hyve_msg.msg import TouchEvent
+from hiwr_msg.msg import EyesLook
+from hiwr_msg.msg import Animation
+from hiwr_msg.msg import TouchEvent
 import roslib
 
 #Permet de parametre la taille de l'ecran
@@ -91,7 +91,7 @@ sprites.add( preRetina );
 class Retina( pygame.sprite.Sprite):
     def __init__(self):
         pygame.sprite.Sprite.__init__(self) #call Sprite initializer
-        self.image = pygame.image.load( path+  '/src/hyve-eyes-png/retine_sim.png').convert_alpha()
+        self.image = pygame.image.load( path+  '/src/hiwr-eyes-png/retine_sim.png').convert_alpha()
         self.rect = self.image.get_rect().move(centerl);
 #        self.image.fill( (255,255,255) ,special_flags=BLEND_RGB_MULT)
 
@@ -102,7 +102,7 @@ sprites.add( retina );
 class Eyes(pygame.sprite.Sprite):
     def __init__(self):
         pygame.sprite.Sprite.__init__(self) #call Sprite initializer
-        self.images  = [ pygame.image.load(path + '/src/hyve-eyes-png/oeil-'+str(i)+'.png').subsurface(65,65,670,350).convert_alpha()  for i in range(1, 12) ]
+        self.images  = [ pygame.image.load(path + '/src/hiwr-eyes-png/oeil-'+str(i)+'.png').subsurface(65,65,670,350).convert_alpha()  for i in range(1, 12) ]
         for i in range(0,11):
             self.images[i].fill( backgroundColor,special_flags=BLEND_RGB_MULT)
         self.images.append( pygame.Surface([0,0]).convert() )
@@ -122,7 +122,7 @@ sprites.add( eyes );
 class Mustach( pygame.sprite.Sprite):
     def __init__(self):
         pygame.sprite.Sprite.__init__(self) #call Sprite initializer
-        mustachSprite = pygame.image.load( path + '/src/hyve-eyes-png/moustaches.png')
+        mustachSprite = pygame.image.load( path + '/src/hiwr-eyes-png/moustaches.png')
         self.images = mustachSprite.subsurface( 0 ,0 , 490 , 175 ).convert_alpha() , mustachSprite.subsurface( 491 ,0 , 490 , 175 ).convert_alpha(),  mustachSprite.subsurface( 982 ,0 , 490 , 175 ).convert_alpha() , pygame.Surface([0,0]).convert()
         self.mustachVersion=1
         self.mustachNumber = 3

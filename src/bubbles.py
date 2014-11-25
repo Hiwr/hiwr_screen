@@ -36,7 +36,7 @@ from efl.elementary.image import Image
 
 from efl.ecore import Animator, Timer
 
-from config import path, script_path, img_path, font_path, video_path
+from config import path, script_path, img_path, font_path
 
 #-- colors
 WHITE = (255, 255, 255, 255)

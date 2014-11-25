@@ -19,8 +19,8 @@
 #############################################################################
 
 import rospy
-from hyvemsg.msg import Animation 
-from hyvemsg.msg import EyesLook 
+from hiwrmsg.msg import Animation 
+from hiwrmsg.msg import EyesLook 
 from pygame import *
 
 def talker():

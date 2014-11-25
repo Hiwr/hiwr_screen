@@ -55,7 +55,7 @@ from efl.elementary.image import Image
 from efl.ecore import Animator, Timer
 
 
-from config import path, script_path, img_path, font_path, video_path
+from config import path, script_path, img_path, font_path
 from color import rotate_hue, lighten, darken, from_to
 from animation import animation_queue, animation_arrays
 from timing import linear_number, sinusoidal_number, linear_tuple_number
@@ -141,19 +141,6 @@ def draw(win, face):
     #    eyes.hide()
     #    blink.show()
         
-
-class Video(Emotion):
-    def __init__(self, win):
-        Emotion.__init__(self, win.evas, module_name="gstreamer")
-        global video_path
-        self.file = video_path
-        self.smooth_scale = True
-        self.play = True
-        self.audio_volume = 1.0 
-
-    @emotion.on_event("frame_resize")
-    def cb_frame_decoded(self):
-        print("Decorated callback successfully called")
 
 class EyeBalls(SmartObject): #Transformable
 
@@ -369,10 +356,8 @@ class Face(SmartObject):
         return True
 
     def add_bubble(self, name, content=None, ratio=1.0, pos=(20,40)):
-#        video=Video(self.win)
         bubble=Bubble(self.win)
         bubble.name=name
-#        bubble.add(video,16.0/9.0)
         bubble.pos=pos
         if content:
             bubble.add(content)
@@ -767,7 +752,7 @@ def on_scenario_state(state, face):
 
     elif (state == "2"):
         # Hyve is watching the TV
-        #=> display a thinking bubble where hyve shows a TV
+        #=> display a thinking bubble where hiwr shows a TV
         print "Switching watching TV animation"
         def state2():
             print "doing todo for state 2"

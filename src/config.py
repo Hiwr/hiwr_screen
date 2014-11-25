@@ -23,12 +23,7 @@
 import os
 import roslib
 
-path = roslib.packages.get_pkg_dir('hyve_screen')
-#os.path.dirname(os.path.abspath(__file__))
+path = roslib.packages.get_pkg_dir('hiwr_screen')
 script_path = os.path.join(path, "src")
-img_path = os.path.join(script_path, "hyve-eyes-png")
-# does not work yet... had to install it in ~/.fonts
+img_path = os.path.join(script_path, "hiwr-eyes-png")
 font_path = os.path.join(script_path, "fonts", "fontawesome-webfont.ttf")
-#video_path = os.path.join(script_path, "video", "bigbuckbunny-trailer.m4v")
-video_path = os.path.join(script_path, "video", "BigBuckBunny_320x180.mp4")
-

@@ -33,7 +33,7 @@ from efl.evas import Map
 from efl.ecore import Animator, Timer
 
 
-from config import path, script_path, img_path, font_path, video_path
+from config import path, script_path, img_path, font_path
 from color import rotate_hue, lighten, darken, from_to
 from animation import animation_queue, animation_arrays
 from timing import linear_number, sinusoidal_number, linear_tuple_number

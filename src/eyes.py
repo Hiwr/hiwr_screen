@@ -52,7 +52,7 @@ FILL_BOTH = EVAS_HINT_FILL, EVAS_HINT_FILL
 
 path = roslib.packages.get_pkg_dir('eyes')
 script_path = os.path.join(path, "src") #os.path.dirname(os.path.abspath(__file__))
-img_path = os.path.join(script_path, "hyve-eyes-png")
+img_path = os.path.join(script_path, "hiwr-eyes-png")
 font_path = os.path.join(script_path, "fonts","fontawesome-webfont.ttf")
 
 print font_path
